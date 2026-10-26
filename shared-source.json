@@ -1,0 +1,20 @@
+{
+  "repository": "https://github.com/ACDC4Robot/Fusion360",
+  "commit": "15a5f8013c254227e8885e07492e5c37ca12c52e",
+  "files": {
+    "convexify_urdf.py": "bf3bc263316f398c953b9cd3c297c3349ab9e804143238eb9e7ea0462c555309",
+    "smoke_test_isaac_urdf.py": "74940a1f3bb5b5d72ab241d7294504aaf0e4173139751f5f74f57edbf4dea9ed"
+  },
+  "vendored_changes": {
+    "convexify_urdf.py": [
+      "Optional dependency installation message adapted for the standalone package."
+    ],
+    "smoke_test_isaac_urdf.py": [
+      "Optional validated massless-reference-frame support; reports physical inertial comparison coverage without inventing mass."
+    ]
+  },
+  "vendored_sha256": {
+    "convexify_urdf.py": "39eee330484638ceb1c3bb94e69802a39ed4b5c8f53e7ca69307a5a98e7de617",
+    "smoke_test_isaac_urdf.py": "257598dacabb445545b8f0ea796a84ea6a8f5b8b8da4a65938766d9159ed0ef2"
+  }
+}

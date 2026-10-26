@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "acdc4robot-onshape"
+version = "0.1.0b2"
+description = "Standalone beta preparation and validation of Onshape URDF bundles"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+authors = [{name = "ACDC4Robot contributors"}]
+dependencies = []
+
+[project.optional-dependencies]
+collision = ["coacd==1.0.7", "trimesh==4.7.4", "numpy==2.5.4"]
+isaac = ["isaacsim-asset-isolated==6.2.0.0", "isaacsim-robot-schema==6.2.0.0", "urdf-usd-converter==0.3.2", "usd-exchange==2.3.0", "usd-optimize==1.1.0", "numpy==2.5.4"]
+
+[project.scripts]
+acdc4robot-onshape = "acdc4robot_onshape.cli:main"
+acdc4robot-convexify = "acdc4robot_onshape.shared.convexify_urdf:main"
+acdc4robot-isaac-check = "acdc4robot_onshape.shared.smoke_test_isaac_urdf:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools]
+license-files = ["LICENSE", "THIRD_PARTY_NOTICES.md"]
+
+[tool.setuptools.package-data]
+"acdc4robot_onshape.shared" = ["source.json"]
