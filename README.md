@@ -4,11 +4,12 @@ A standalone Python CLI for **locally validating and preparing an exported URDF
 bundle**. This companion does not import the Fusion Add-In or Autodesk APIs,
 and does not change the existing Fusion release.
 
-**Status:** `0.1.0b2` foundation. Automated tests use synthetic URDF bundles.
-Live native Onshape export compatibility has not yet been established. No
-Onshape API connector, embedded Onshape UI, app-store integration, or automatic
-CAD-to-URDF export is included in this foundation. A successful offline report
-does not establish simulator or CAD-frame correctness.
+**Status:** `0.1.0b2` experimental standalone beta. All 21 automated tests pass,
+including native Onshape 1.222 one-part and articulated export fixtures. Both
+native fixtures passed isolated Isaac Sim 6.2 asset conversion. Collision/contact
+simulation and general CAD-frame correctness remain unvalidated. No Onshape API
+connector, embedded UI, app-store integration, or automatic CAD-to-URDF export
+is included. See the verified native export example and release notes below.
 
 Onshape now has native assembly URDF export. Export the assembly as URDF with
 **STL geometry**, then give this tool the resulting directory or ZIP. The tool
@@ -148,9 +149,8 @@ be tested without an Onshape account, Fusion, NumPy, or a simulator.
 
 Native Onshape 1.222 exports have now passed one-part and repeated-instance
 revolute-joint intake checks. Broader release acceptance still requires native
-STL exports from known
-Onshape versions/configurations and compare joints, mass, CoM, full inertia
-orientation, and geometry bounds with CAD. API acquisition and simulator
+STL exports covering more Onshape versions and configurations, plus comparisons
+of joints, mass, CoM, full inertia orientation, and geometry bounds with CAD. API acquisition and simulator
 acceptance remain separate gates. MIT license; see `LICENSE`.
 
 ## Verified native export example (Onshape 1.222)
